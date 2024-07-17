@@ -21,7 +21,9 @@ public class UserController {
     }
 
     @PostMapping()
-    public String saveUser(@RequestParam String name, @RequestParam int age, @RequestParam String email) {
+    public String saveUser(@RequestParam String name,
+                           @RequestParam int age,
+                           @RequestParam String email) {
         userService.addUser(name,age,email);
         return "User saved";
     }
